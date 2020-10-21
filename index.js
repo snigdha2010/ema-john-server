@@ -38,7 +38,6 @@ client.connect(err => {
 
   //load product from db
   app.get('/products',(req,res)=>{
-    
       const search = req.query.search;
       console.log("kk",search)
       collection.find({name: {$regex: search}})
